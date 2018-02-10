@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
   selector: 'nb-spotify',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpotifyComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private spotifyService: SpotifyService,
+  ) { }
 
   ngOnInit() {
+    console.log(this.spotifyService.track('4iMFxtzAcgUfbsagyY3Vla'));
   }
 
 }
