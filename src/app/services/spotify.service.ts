@@ -9,10 +9,7 @@ const routes: {} = {
 };
 
 // tslint:disable-next-line
-const auth = '';
-const httpOptions = {
-  headers: new HttpHeaders().set('Authorization', 'Bearer ' + auth),
-};
+const baseURL = 'https://accounts.spotify.com/authorize?client_id=';
 
 @Injectable()
 export class SpotifyService {
@@ -20,10 +17,4 @@ export class SpotifyService {
   constructor(
     private http: HttpClient,
   ) {}
-
-  public track(id: string) {
-    return this.http.get('https://api.spotify.com/v1/tracks/' + id, httpOptions).subscribe(data => {
-      console.log(data);
-    });
-  }
 }

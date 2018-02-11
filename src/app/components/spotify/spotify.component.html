@@ -1,3 +1,4 @@
-<p>
-  spotify works!
-</p>
+<a *ngIf="!isAuthorized" href="https://accounts.spotify.com/authorize?client_id=e48f618179c04ac2a80a456a05d19a82&redirect_uri=http:%2F%2Flocalhost:4200%2Fcallback&response_type=token&state=34924">Login</a>
+<div *ngIf="isAuthorized">
+  authorized.
+</div>

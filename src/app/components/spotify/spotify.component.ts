@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
@@ -6,14 +6,14 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: './spotify.component.html',
   styleUrls: ['./spotify.component.scss']
 })
-export class SpotifyComponent implements OnInit {
+export class SpotifyComponent {
 
   constructor(
     private spotifyService: SpotifyService,
   ) { }
 
-  ngOnInit() {
-    console.log(this.spotifyService.track('4iMFxtzAcgUfbsagyY3Vla'));
+  auth() {
+
   }
 
 }
